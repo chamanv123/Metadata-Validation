@@ -1,0 +1,68 @@
+# Dynamic Schema Comparator
+
+This project provides a tool for comparing database schemas between DB2 and Snowflake. It fetches metadata from both databases, compares the schemas, and generates a detailed comparison report.
+
+## Features
+
+- Fetch metadata from DB2 and Snowflake databases
+-Impur Your SRC na TRG QUERY IN THE RESPECTIVE .TXT FILE 
+-Dynamic column mapping between DB2 and Snowflake
+- Detailed schema comparison
+- Excel report generation with highlighted differences
+
+## Prerequisites
+
+- Python 3.6+
+- Required Python packages (install via `pip install -r requirements.txt`):
+  - pandas
+  - snowflake-connector-python
+  - openpyxl
+  - pyyaml
+  - numpy
+  - ibm_db (for DB2 connection)
+
+## Data Validation Configuration
+
+This README provides an overview of the data validation configuration settings for a project that compares data between a DB2 source database and a Snowflake target database.
+
+Configuration Details
+Source Database (DB2)
+Database Type: DB2_SRC
+Connection Parameters:
+Hostname: [To be filled]
+User ID: [To be filled]
+Password: [To be filled]
+Database Name: [To be filled]
+Port: [To be filled]
+
+Target Database (Snowflake)
+Snowflake User: [To be filled]
+Snowflake Account: [To be filled]
+Snowflake Warehouse: [To be filled]
+Snowflake Database: [To be filled]
+Snowflake Schema: [To be filled]
+Snowflake Role: [To be filled]
+
+Additional Settings
+Run on S1/S2 Failure: YES
+
+Target Connection 2
+DLL Path: D:\Users\AppData\Roaming\Python\Python312\site-\bin
+
+## Notes
+
+The source database connection details need to be filled in for the validation process to work.
+There's a commented-out section for an alternative DB2 target configuration (DB2_TRG) if needed.
+Ensure all Snowflake connection details are correctly filled before running the validation.
+
+The 'Run on S1/S2 Failure' setting is set to "YES", which likely means the process will continue even if certain stages fail.
+The Target Connection 2 section includes a DLL path, which may be required for specific database drivers or modules.
+
+## Usage
+
+1-Fill in all the empty fields in the configuration file.
+2-Ensure you have the necessary permissions and access to both the source and target databases.
+3-Run your data validation tool using this configuration file.
+
+## Db2-Db2 File is for db2 to db2 comparison
+
